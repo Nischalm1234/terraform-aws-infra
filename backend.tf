@@ -10,7 +10,7 @@ terraform {
 
   # This connects to the remote state resources you just built
   backend "s3" {
-    bucket         = "terraform-state-nischal-2026" # Ensure this matches your exact bucket name
+    bucket         = "terraform-state-nischal-2024" # Ensure this matches your exact bucket name
     key            = "aws-infra/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-state-lock"
