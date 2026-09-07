@@ -106,7 +106,7 @@ resource "aws_security_group" "app" {
     protocol        = "tcp"
     security_groups = [aws_security_group.web.id]
   }
-  
+
   ingress {
     from_port       = 22
     to_port         = 22

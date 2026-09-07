@@ -18,11 +18,11 @@ module "networking" {
 module "compute" {
   source = "./modules/compute"
 
-  project_name      = var.project_name
-  environment       = var.environment
-  instance_type     = var.instance_type
-  key_pair_name     = var.key_pair_name
-  
+  project_name  = var.project_name
+  environment   = var.environment
+  instance_type = var.instance_type
+  key_pair_name = var.key_pair_name
+
   # Fetching these IDs dynamically from the networking module!
   public_subnet_id  = module.networking.public_subnet_id
   private_subnet_id = module.networking.private_subnet_id
