@@ -25,5 +25,5 @@ output "s3_bucket_name" {
 
 output "ami_used" {
   description = "Ubuntu AMI used for EC2 instances"
-  value       = module.compute.ami_used
+  value       = module.compute.ami_id_used
 }
