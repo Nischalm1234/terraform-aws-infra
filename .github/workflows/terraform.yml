@@ -35,12 +35,11 @@ jobs:
         run: terraform fmt -check
         continue-on-error: true
 
-      # 5. Runs the plan (always runs)
+      # 5. Runs the plan
       - name: Terraform Plan
-        run: terraform plan -no-color
+        run: terraform plan -input=false -no-color
 
-      # 6. Runs apply ONLY if the branch is main AND it's a push
-      # The -auto-approve flag skips the "yes" prompt!
+      # 6. Runs apply
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: terraform apply -input=false -auto-approve

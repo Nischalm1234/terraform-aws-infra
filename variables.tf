@@ -43,4 +43,5 @@ variable "instance_type" {
 variable "key_pair_name" {
   description = "Name of your existing AWS key pair"
   type        = string
+  default     = "devops-key"  
 }
